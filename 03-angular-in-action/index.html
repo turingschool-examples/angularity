@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="Application">
+<head>
+  <meta charset="utf-8">
+  <title>Hello Angular</title>
+</head>
+<body>
+
+  <div ng-controller="HelloController">
+    <input ng-model="greeting" type="text">
+    <p>{{greeting}}, world!</p>
+  </div>
+
+  <div ng-controller="MeatballController">
+
+    <p>That is a {{adjective}} meatball!</p>
+
+    <div>
+      <button ng-click="changeToSaucy()">Saucy</button>
+      <button ng-click="changeToSpicy()">Spicy</button>
+    </div>
+
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

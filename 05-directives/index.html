@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="Application">
+<head>
+  <meta charset="utf-8">
+  <title>Hello Angular</title>
+</head>
+<body>
+
+  <div ng-controller="CartController">
+      <h1>Shopping Cart</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in items">
+            <td>{{item.title}}</td>
+            <td><input type="number" ng-model="item.quantity"></td>
+            <td>{{item.price | currency}}</td>
+            <td>{{item.price * item.quantity | currency}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

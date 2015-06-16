@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="Application">
+<head>
+  <meta charset="utf-8">
+  <title>Hello Angular</title>
+</head>
+<body>
+  <div ng-controller="AdditionController">
+    <h1>Addition</h1>
+
+    <button ng-click="toggleVisibility()">Show/Hide</button>
+
+    <p ng-show="visibilityState"><input type="number" ng-model="addend"> + 2 = {{sum}}</p>
+  </div>
+
+  <div ng-controller="TipController">
+    <h1>Tip Calculator</h1>
+
+    <button ng-click="toggleVisibility()">Show/Hide</button>
+
+    <ul ng-show="visibilityState">
+      <li>Bill Amount: $<input type="number" ng-model="billAmount"></li>
+      <li>Tip Percentage: <input type="number" ng-model="tipPercentage">%</li>
+      <li>Tip Amount: {{tipAmount | currency}}</li>
+      <li>Total Bill: {{totalBill | currency}}</li>
+    </ul>
+  </div>
+
+  <div ng-controller="CartController">
+      <h1>Shopping Cart</h1>
+
+      <button ng-click="toggleVisibility()">Show/Hide</button>
+
+      <div ng-show="visibilityState">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in items">
+              <td>{{item.title}}</td>
+              <td><input type="number" ng-model="item.quantity"></td>
+              <td>{{item.price | currency}}</td>
+              <td>{{item.price * item.quantity | currency}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>Order Total</strong>: {{orderTotal | currency}}
+        </p>
+      </div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

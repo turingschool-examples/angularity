@@ -17,4 +17,5 @@ Application.controller('MeatballController', ['$scope', function ($scope) {
   };
 
   // Your turn: Can you add one more additional button here?
+  // Bonus: Let's abstract everything out to a reusable function!
 }]);

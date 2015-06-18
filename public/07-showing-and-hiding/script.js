@@ -31,9 +31,13 @@ Application.controller('TipController', function ($scope) {
   }
 
   $scope.$watchGroup(['billAmount', 'tipPercentage'], calculateTip);
-  $scope.$watchGroup(['billAmount', 'tipPercentage'], calculateBillAmount);
+  $scope.$watchGroup(['billAmount', 'tipAmount'], calculateBillAmount);
 
-  // Your Turn: Can you display a message when someone dedicdes to be a
+  $scope.$watch('tipPercentage', function () {
+    $scope.cheapskate = $scope.tipPercentage < 15;
+  });
+
+  // Your Turn: Can you display a message when someone decides to be a
   // cheapskate and tip less than 15%?
 });
 

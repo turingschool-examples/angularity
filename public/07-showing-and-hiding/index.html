@@ -18,6 +18,8 @@
 
     <button ng-click="toggleVisibility()">Show/Hide</button>
 
+    <p ng-show="cheapskate">YOU ARE A HORRIBLE PERSON.</p>
+
     <ul ng-show="visibilityState">
       <li>Bill Amount: $<input type="number" ng-model="billAmount"></li>
       <li>Tip Percentage: <input type="number" ng-model="tipPercentage">%</li>

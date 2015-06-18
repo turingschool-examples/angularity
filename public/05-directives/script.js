@@ -7,6 +7,15 @@ Application.controller('CartController', function ($scope) {
     { title: 'Whatchamacallits', quantity: 7, price: 1.95, created: new Date() }
   ];
 
+  $scope.addItem = function (title, quantity, price) {
+    $scope.items.push({
+      title: title,
+      quantity: quantity,
+      price: price,
+      created: new Date()
+    });
+  };
+
   // Your turn:
   //   - Can you add a form and button that adds a new item?
   //   - Can you use the date filter to format the `created` property?

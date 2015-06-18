@@ -24,9 +24,14 @@
             <td><input type="number" ng-model="item.quantity"></td>
             <td>{{item.price | currency}}</td>
             <td>{{item.price * item.quantity | currency}}</td>
+            <td>{{item.created | date:'short'}}</td>
           </tr>
         </tbody>
       </table>
+      <input type="text" ng-model="title">
+      <input type="number" ng-model="quantity">
+      <input type="number" ng-model="price">
+      <button ng-click="addItem(title, quantity, price)">wowowowowow</button>
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>

@@ -1,7 +1,8 @@
 var Application = angular.module('Application', []);
 
 Application.controller('HelloController', function ($scope) {
-  $scope.greeting = 'Hello';
+  $scope.greeting = 'Goodbye';
+  $scope.target = 'world';
 });
 
 // Your turn: Can you create a scope property that is bound to "world"?

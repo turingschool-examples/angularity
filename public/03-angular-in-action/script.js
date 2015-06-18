@@ -8,13 +8,9 @@ Application.controller('MeatballController', function ($scope) {
 
   $scope.adjective = 'spicy';
 
-  $scope.changeToSaucy = function () {
-    $scope.adjective = 'saucy';
-  };
-
-  $scope.changeToSpicy = function () {
-    $scope.adjective = 'spicy';
-  };
+  $scope.change = function (adjective) {
+    $scope.adjective = adjective;
+  }
 
   // Your turn: Can you add one more additional button here?
   // Bonus: Let's abstract everything out to a reusable function!

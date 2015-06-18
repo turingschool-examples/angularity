@@ -1,6 +1,6 @@
 var Application = angular.module('Application', []);
 
-Application.controller('ListController', ['$scope', function ($scope) {
+Application.controller('ListController', function ($scope) {
   $scope.newItem = '';
   $scope.items = ['pizza', 'veggie burgers'];
 
@@ -10,4 +10,4 @@ Application.controller('ListController', ['$scope', function ($scope) {
   };
 
   // Your turn: Can you add a button that clears the entire list?
-}]);
+});

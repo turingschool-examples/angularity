@@ -1,6 +1,6 @@
 var Application = angular.module('Application', []);
 
-Application.controller('AdditionController', ['$scope', function ($scope) {
+Application.controller('AdditionController', function ($scope) {
   $scope.addend = 0;
 
   $scope.visibilityState = false;
@@ -11,9 +11,9 @@ Application.controller('AdditionController', ['$scope', function ($scope) {
   $scope.$watch('addend', function () {
     $scope.sum = 2 + $scope.addend;
   });
-}]);
+});
 
-Application.controller('TipController', ['$scope', function ($scope) {
+Application.controller('TipController', function ($scope) {
   $scope.billAmount = 0;
   $scope.tipPercentage = 20;
 
@@ -35,9 +35,9 @@ Application.controller('TipController', ['$scope', function ($scope) {
 
   // Your Turn: Can you display a message when someone dedicdes to be a
   // cheapskate and tip less than 15%?
-}]);
+});
 
-Application.controller('CartController', ['$scope', function ($scope) {
+Application.controller('CartController', function ($scope) {
   $scope.items = [
     { title: 'Widgets', quantity: 5, price: 3.95 },
     { title: 'Dohickeys', quantity: 3, price: 8.95 },
@@ -56,4 +56,4 @@ Application.controller('CartController', ['$scope', function ($scope) {
   }
 
   $scope.$watch('items', updateOrderTotal, true);
-}]);
+});

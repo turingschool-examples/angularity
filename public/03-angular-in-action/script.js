@@ -1,10 +1,10 @@
 var Application = angular.module('Application', []);
 
-Application.controller('HelloController', ['$scope', function ($scope) {
+Application.controller('HelloController', function ($scope) {
   $scope.greeting = 'Hello';
-}]);
+});
 
-Application.controller('MeatballController', ['$scope', function ($scope) {
+Application.controller('MeatballController', function ($scope) {
 
   $scope.adjective = 'spicy';
 
@@ -18,4 +18,4 @@ Application.controller('MeatballController', ['$scope', function ($scope) {
 
   // Your turn: Can you add one more additional button here?
   // Bonus: Let's abstract everything out to a reusable function!
-}]);
+});

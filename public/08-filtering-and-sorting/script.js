@@ -3,7 +3,7 @@ var Application = angular.module('Application', []);
 // FYI, we have a list of presidents in another file. They're stored in the
 // `presidents` variable. So, there is no black magic here or anything.
 
-Application.controller('PresidentsController', ['$scope', function ($scope) {
+Application.controller('PresidentsController', function ($scope) {
 
   $scope.presidents = presidents;
 
@@ -19,9 +19,9 @@ Application.controller('PresidentsController', ['$scope', function ($scope) {
     }
   });
 
-  // Your Turn: Can you try one of the following?
+  // Your Turn: Can you try one (or all) of the following?
   //   - Filtering by the start or end year
   //   - Sorting by the start or end year
   //   - Sorting by the length of the president's term
 
-}]);
+});

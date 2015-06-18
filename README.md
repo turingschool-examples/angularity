@@ -4,5 +4,5 @@ Get started:
 
 ```
 bundle
-ruby application.rb
+shotgun application.rb
 ```

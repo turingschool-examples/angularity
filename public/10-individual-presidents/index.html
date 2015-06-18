@@ -3,36 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Hello Angular</title>
-  <style>
-    table {
-      width: 50%;
-      border: 1px solid red;
-      margin: 1em;
-      padding: 1em;
-    }
-
-    td {
-      border: 1px solid blue;
-      margin: 1em;
-      padding: 1em;
-    }
-
-    .filter {
-      border: 1px solid purple;
-      margin: 1em;
-      padding: 1em;
-    }
-
-    .add-president {
-      border: 1px solid green;
-      margin: 1em;
-      padding: 1em;
-    }
-
-    input {
-      margin: 0 3em 0 0.5em;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -54,12 +25,17 @@
     </div>
 
     <table>
-      <tr ng-repeat="president in presidents">
+      <tr ng-repeat="president in presidents" ng-click="showPresident(president)">
         <td>{{president.name}}</td>
         <td>{{president.startYear}}</td>
         <td>{{president.endYear}}</td>
       </tr>
     </table>
+
+    <div class="current-president" ng-if="currentPresident">
+      <h2>{{currentPresident.name}}</h2>
+      <p>{{currentPresident.startYear}} &ndash; {{currentPresident.endYear}}</p>
+    </div>
 
   </div>
 

@@ -4,7 +4,7 @@ require "./lib/presidents"
 
 get "/" do
   Dir.chdir("public")
-  @folders = Dir.glob("0*")
+  @folders = Dir.glob("*")
   erb :index
 end
 
@@ -18,10 +18,10 @@ get "/api/presidents/:id" do
 end
 
 post "/api/presidents" do
-  params = JSON.parse(request.env["rack.input"].read)
+  new_president = JSON.parse(request.env["rack.input"].read)
   presidents << params
   session[:presidents] = presidents
-  presidents.to_json
+  new_president.to_json
 end
 
 helpers do

@@ -14,7 +14,11 @@ Application.controller('PresidentsController', function ($scope, $http) {
          .success(function (response) {
            presidents.push(response);
          });
-   };
+  };
+
+  $scope.showPresident = function (president) {
+    $scope.currentPresident = president;
+  };
 
   $scope.$watch('presidentsFilter', function () {
     if ($scope.presidentsFilter) {

@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+table {
+  width: 50%;
+  border: 1px solid red;
+  margin: 1em;
+  padding: 1em;
+  float: left;
+}
+
+td {
+  border: 1px solid blue;
+  margin: 1em;
+  padding: 1em;
+}
+
+.filter {
+  border: 1px solid purple;
+  margin: 1em;
+  padding: 1em;
+}
+
+.add-president {
+  border: 1px solid green;
+  margin: 1em;
+  padding: 1em;
+}
+
+.current-president {
+  border: 1px solid lavender;
+  margin: 1em;
+  padding: 1em;
+  width: 40%;
+  float: right;
+}
+
+input {
+  margin: 0 3em 0 0.5em;
+}
